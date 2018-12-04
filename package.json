@@ -1,0 +1,38 @@
+{
+  "name": "huddl-smart-contracts",
+  "version": "1.0.0",
+  "description": "This repository contains all Huddl smart contracts",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "bignumber.js": "^8.0.1",
+    "ganache-cli": "^6.1.8",
+    "husky": "^1.1.0",
+    "openzeppelin-solidity": "^2.0.0",
+    "solium": "^1.1.8",
+    "truffle": "^4.1.13",
+    "web3": "^1.0.0-beta.36"
+  },
+  "scripts": {
+    "test": "scripts/test.sh",
+    "compile": "truffle compile",
+    "migrate": "truffle migrate",
+    "networks": "truffle networks",
+    "lint:sol": "solium -d .",
+    "lint:sol:fix": "solium -d . --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint:sol:fix"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "Sameep Singhania",
+  "license": "MIT"
+}
